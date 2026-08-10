@@ -1,0 +1,3190 @@
+{
+  "info": {
+    "_postman_id": "8dacb56e-6755-4be5-83a7-4e6f7d5dadac",
+    "name": "3. NsFashion-Api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "40642507",
+    "_collection_link": "https://go.postman.co/collection/28799266-8dacb56e-6755-4be5-83a7-4e6f7d5dadac?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "userApp",
+      "item": [
+        {
+          "name": "auth",
+          "item": [
+            {
+              "name": "login",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"username\": \"abc@gmail.com\",\r\n    \"password\":\"password\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/userapp/auth/login",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "userapp",
+                    "auth",
+                    "login"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "register",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\":\"xyz@gmail.com\",\r\n     \"password\" : \"password\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/userapp/auth/register",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "userapp",
+                    "auth",
+                    "register"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "resetPasswordOtp",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\":\"harshpatel726891@gmail.com\"\r\n}    "
+                },
+                "url": {
+                  "raw": "http://localhost:5000/userapp/auth/reset-password-otp",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "userapp",
+                    "auth",
+                    "reset-password-otp"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "resetPassword",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"code\": \"295413\",\r\n    \"newPassword\": \"123456789\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/userapp/auth/reset-password",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "userapp",
+                    "auth",
+                    "reset-password"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "logout",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZTM3ZTg2MWI3ZTM1MDU5ZGFiMGQwYyIsImVtYWlsIjoibml0aXNocGF0d2FyYWJpaGFyQGdtYWlsLmNvbSIsImlhdCI6MTY3NjI4NTAxNiwiZXhwIjoxNjc2ODg1MDE2fQ.v1U9_SE687EYO8Ay352T-MkzUZEjvbQ5clId7Y0VNLc",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/userapp/auth/logout",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "userapp",
+                    "auth",
+                    "logout"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "validateOtp",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"otp\":\"d7c16696-8854-4f8e-ad8f-c0294b8797c7\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/userapp/auth/validate-otp",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "userapp",
+                    "auth",
+                    "validate-otp"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "userRoutes",
+          "item": [
+            {
+              "name": "me",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OGM0OGEyZDRkZTk5YzBjZWI4ODM1MyIsImVtYWlsIjoidXNlckBnbWFpbC5jb20iLCJpYXQiOjE2ODY5MTUzMTEsImV4cCI6MTY4NzUxNTMxMX0.OgotzJ4RphtOk17gRT2JRnj59EslGl3gIQx-2XW4Fqw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:5000/userapp/user/me",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "userapp",
+                    "user",
+                    "me"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "update",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZmRmZmJkZDdhM2FmODdjMTQyYzNjMiIsImVtYWlsIjoidmlrYXNAZ21haWwuY29tIiwiaWF0IjoxNjc3NTkwNDYxLCJleHAiOjE2NzgxOTA0NjF9.2a2LcyVysdEff_v43Zn6IkrOaIX31ioZO4-QhtAQwQI",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\" : \"vikas\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:8000/userapp/user/update/63fdffbdd7a3af87c142c3c2",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "userapp",
+                    "user",
+                    "update",
+                    "63fdffbdd7a3af87c142c3c2"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "softDelete",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDdhYjhmM2IwYzgzNzUwMzZmMGNkMyIsImVtYWlsIjoiaGFyc2hwYXRlbEBnbWFpbC5jb20iLCJpYXQiOjE2NzUwODAxODUsImV4cCI6MTY3NTY4MDE4NX0.lHMehalkhIPjo8KXufVXhpoo8MqhYGn_IYs8snppLuY",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:5000/userapp/user/soft-delete/63d7ab8f3b0c8375036f0cd3",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "userapp",
+                    "user",
+                    "soft-delete",
+                    "63d7ab8f3b0c8375036f0cd3"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "paymentRoutes",
+          "item": [
+            {
+              "name": "get",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZTM3ZTg2MWI3ZTM1MDU5ZGFiMGQwYyIsImVtYWlsIjoibml0aXNocGF0d2FyYWJpaGFyQGdtYWlsLmNvbSIsImlhdCI6MTY3Njg5MTU5MiwiZXhwIjoxNjc3NDkxNTkyfQ.Gmrjg40lPoXjDuNpJPb39-bXqK5YZi1uwjSxOGcyWxI",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/userapp/payment/get/63f49ac73d3ffda367caa6a1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "userapp",
+                    "payment",
+                    "get",
+                    "63f49ac73d3ffda367caa6a1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "create",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZjM1MTQ2M2QzZmZkYTM2N2NhYTJjNSIsImVtYWlsIjoicnVwZXNoNzc1OTkwQGdtYWlsLmNvbSIsImlhdCI6MTY3NzA2NDUzNywiZXhwIjoxNjc3NjY0NTM3fQ.ubTVgtJ_YC_o61mbv0hiOj8RRT1AdMMsCeIzM5lFixk",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"userId\":\"63f351463d3ffda367caa2c5\",\r\n  \"refId\":\"#UPI ID\",\r\n   \"paymentChannel\":\"Cash\",\r\n    \"currentPayment\":5000,\r\n    \"totalPayment\":15000,\r\n    \"paymentStatus\": \"partial\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/userapp/payment/create",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "userapp",
+                    "payment",
+                    "create"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "updatePayment",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OGRlMjA1NTg2MGMzY2M1NGFkNTZlOSIsImVtYWlsIjoiYWJjQGdtYWlsLmNvbSIsImlhdCI6MTY4OTA4MjE2OCwiZXhwIjoxNjg5NjgyMTY4fQ.SIAAlvI92tt9rnvZawimYFRR3OFgg-qvSOWizCfK5uk",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"totalPayment\":3400\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:5000/userapp/payment/update/64ad371324570449834da69d",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "userapp",
+                    "payment",
+                    "update",
+                    "64ad371324570449834da69d"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "New Request",
+              "request": {
+                "method": "GET",
+                "header": []
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "productRoutes",
+          "item": [
+            {
+              "name": "get",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZjM1MTQ2M2QzZmZkYTM2N2NhYTJjNSIsImVtYWlsIjoicnVwZXNoNzc1OTkwQGdtYWlsLmNvbSIsImlhdCI6MTY3NzA2NDUzNywiZXhwIjoxNjc3NjY0NTM3fQ.ubTVgtJ_YC_o61mbv0hiOj8RRT1AdMMsCeIzM5lFixk",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/userapp/product/get/648edad0f21112fa41a8da75",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "userapp",
+                    "product",
+                    "get",
+                    "648edad0f21112fa41a8da75"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "list",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZjhiYTA1YWEzOWIzYmYxYzQzOWIwNSIsImVtYWlsIjoiTml0aXNoQHNhbnUuY29tIiwiaWF0IjoxNjc5MTMyMTgzLCJleHAiOjE2Nzk3MzIxODN9.pNZ9PIS4AljAh254VdB0XxcuV04LXMnKZueVoRX35T4",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"query\":{\"price.mrp\":{\"$gte\":0,\"$lte\":1000}},\r\n  \"options\": {\r\n    \"collation\": \"\",\r\n    \"sort\": {\"name\":1},\r\n    \"populate\": \"\",\r\n    \"projection\": \"\",\r\n    \"lean\": false,\r\n    \"leanWithId\": true,\r\n    \"page\": 1,\r\n    \"limit\": 9,\r\n    \"pagination\": true,\r\n    \"useEstimatedCount\": false,\r\n    \"useCustomCountFn\": false,\r\n    \"forceCountFn\": false,\r\n    \"read\": {},\r\n    \"options\": {}\r\n  },\r\n  \"isCountOnly\": false\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/userapp/product/list",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "userapp",
+                    "product",
+                    "list"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "count",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"where\": {\r\n    \"isActive\": true\r\n  }\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/userapp/product/count",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "userapp",
+                    "product",
+                    "count"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "update",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZmZjODkyYjA1NzZhNWQzM2YzZTEwMSIsImVtYWlsIjoidXNlckBnbWFpbC5jb20iLCJpYXQiOjE2Nzc3MDc0MzAsImV4cCI6MTY3ODMwNzQzMH0.wfqbDy8787KzTwCGsH3YWqsgAuMZb-4Q9qoPJcCBS3o",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"rating\":[\r\n        {\r\n            \"userId\":\"63ffc892b0576a5d33f3e101\",\r\n            \"value\":9\r\n        }\r\n    ]\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/userapp/product/update/63ffd0d9a024069685150c14",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "userapp",
+                    "product",
+                    "update",
+                    "63ffd0d9a024069685150c14"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "cartRoutes",
+          "item": [
+            {
+              "name": "update",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OWFjNjQxZjI3NWUwZWY0YTY4ZjQ4MiIsImVtYWlsIjoidXNlckBnbWFpbC5jb20iLCJpYXQiOjE2ODc4NjQ5MDYsImV4cCI6MTY4ODQ2NDkwNn0.k6QyESjbwtKvi7U17n4Jb2O1uev_TotPwRpIhUsDBcU",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"products\": [\r\n                    {\r\n                        \"productId\": \"648edad0f21112fa41a8da75\",\r\n                        \"qty\": 3\r\n                       \r\n                        \r\n                    }\r\n                ]\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/userapp/cart/update/649ac671f275e0ef4a68f48c",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "userapp",
+                    "cart",
+                    "update",
+                    "649ac671f275e0ef4a68f48c"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "softDelete",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OGRlMjA1NTg2MGMzY2M1NGFkNTZlOSIsImVtYWlsIjoiYWJjQGdtYWlsLmNvbSIsImlhdCI6MTY4NzYwMjk2MywiZXhwIjoxNjg4MjAyOTYzfQ._R74Hji7-TraWcP_83bztTPb3cVz1fraE8I6nq7wQTM",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/userapp/cart/soft-delete/6496f2e9d2b2bf3342496f1b",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "userapp",
+                    "cart",
+                    "soft-delete",
+                    "6496f2e9d2b2bf3342496f1b"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "create",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OGRlMjA1NTg2MGMzY2M1NGFkNTZlOSIsImVtYWlsIjoiYWJjQGdtYWlsLmNvbSIsImlhdCI6MTY4ODExOTM4MCwiZXhwIjoxNjg4NzE5MzgwfQ.ZxSOi65dhgbJkuJ5BHV1gO5uz2oRwNw85wKp-P7pbJ0",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"userId\":\"648de2055860c3cc54ad56e9\",\r\n    \"products\":[\r\n        {\r\n            \"productId\": \"648edd36f21112fa41a8da91\",\r\n            \"qty\": 1\r\n        }\r\n     ]\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/userapp/cart/create/",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "userapp",
+                    "cart",
+                    "create",
+                    ""
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "get",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OGRlMjA1NTg2MGMzY2M1NGFkNTZlOSIsImVtYWlsIjoiYWJjQGdtYWlsLmNvbSIsImlhdCI6MTY4NzYwMjk2MywiZXhwIjoxNjg4MjAyOTYzfQ._R74Hji7-TraWcP_83bztTPb3cVz1fraE8I6nq7wQTM",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:5000/userapp/cart/get/6496ca65d4611917669e0da3",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "userapp",
+                    "cart",
+                    "get",
+                    "6496ca65d4611917669e0da3"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "list",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OWFjNjQxZjI3NWUwZWY0YTY4ZjQ4MiIsImVtYWlsIjoidXNlckBnbWFpbC5jb20iLCJpYXQiOjE2ODc4NjQ5MDYsImV4cCI6MTY4ODQ2NDkwNn0.k6QyESjbwtKvi7U17n4Jb2O1uev_TotPwRpIhUsDBcU",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"query\":{},\r\n  \"options\": {\r\n    \"collation\": \"\",\r\n    \"sort\": {\"name\":1},\r\n    \"populate\": \"\",\r\n    \"projection\": \"\",\r\n    \"lean\": false,\r\n    \"leanWithId\": true,\r\n    \"page\": 1,\r\n    \"limit\": 10,\r\n    \"pagination\": true,\r\n    \"useEstimatedCount\": false,\r\n    \"useCustomCountFn\": false,\r\n    \"forceCountFn\": false,\r\n    \"read\": {},\r\n    \"options\": {}\r\n  },\r\n  \"isCountOnly\": false\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/userapp/cart/list",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "userapp",
+                    "cart",
+                    "list"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "softDleteMany",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \r\n  \"ids\": [\r\n    \"63d99d91e7da88be4f888201\"\r\n  ]\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/cart/softDeleteMany",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "cart",
+                    "softDeleteMany"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "orderRoutes",
+          "item": [
+            {
+              "name": "update",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZjM1MTQ2M2QzZmZkYTM2N2NhYTJjNSIsImVtYWlsIjoicnVwZXNoNzc1OTkwQGdtYWlsLmNvbSIsImlhdCI6MTY3NzQxOTY4MiwiZXhwIjoxNjc4MDE5NjgyfQ.RF5qcgGh3NYiiVnp-2xG3fK67Quco3Lb1C9h5ZCTJFg",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n        \"products\": [\r\n            {\r\n                        \"address\": {\r\n                            \"locality\": \"basti khera\",\r\n                            \"city\": \"unnao\",\r\n                            \"state\": \"uttar pradesh\",\r\n                            \"country\": \"India\",\r\n                            \"zipcode\": 209827\r\n                        },\r\n                        \"orderStatus\": {\r\n                            \"orderConfirm\": {\r\n                                \"isConfirmed\": true,\r\n                                \"date\": \"2023-09-13T02:18:22.836Z\"\r\n                            },\r\n                            \"shipped\": {\r\n                                \"isConfirmed\": false,\r\n                                \"date\": \"2023-09-13T02:18:22.836Z\"\r\n                            },\r\n                            \"outForDelivery\": {\r\n                                \"isConfirmed\": false,\r\n                                \"date\": \"2023-09-13T02:18:22.836Z\"\r\n                            },\r\n                            \"delivered\": {\r\n                                \"isConfirmed\": false,\r\n                                \"date\": \"2023-09-13T02:18:22.836Z\"\r\n                            },\r\n                            \"cancel\": {\r\n                                \"isConfirmed\": false,\r\n                                \"date\": \"2023-09-13T02:18:22.836Z\"\r\n                            },\r\n                            \"refunded\": {\r\n                                \"isConfirmed\": false,\r\n                                \"date\": \"2023-09-13T02:18:22.836Z\"\r\n                            }\r\n                        },\r\n                        \"productId\": \"63edf99c3d3ffda367ca8975\",\r\n                        \"qty\": 1,\r\n                        \"packageId\": \"63ecc5822e1797f4b8ff43b1\",\r\n                        \"status\": \"upcoming\",\r\n                        \"paymentStatus\": \"pending\",\r\n                        \"_id\": \"63fb856175660e5e9bc39d00\",\r\n                        \"id\": \"63fb856175660e5e9bc39d00\"\r\n                    },\r\n            {\r\n                \"address\": {\r\n                    \"locality\": \"basti khera\",\r\n                    \"city\": \"unnao\",\r\n                    \"state\": \"uttar pradesh\",\r\n                    \"country\": \"India\",\r\n                    \"zipcode\": 209827\r\n                },\r\n                \"orderStatus\": {\r\n                    \"orderConfirm\": {\r\n                        \"isConfirmed\": true,\r\n                        \"date\": \"2023-09-13T02:18:22.836Z\"\r\n                    },\r\n                    \"shipped\": {\r\n                        \"isConfirmed\": false,\r\n                        \"date\": \"2023-09-13T02:18:22.836Z\"\r\n                    },\r\n                    \"outForDelivery\": {\r\n                        \"isConfirmed\": false,\r\n                        \"date\": \"2023-09-13T02:18:22.836Z\"\r\n                    },\r\n                    \"delivered\": {\r\n                        \"isConfirmed\": false,\r\n                        \"date\": \"2023-09-13T02:18:22.836Z\"\r\n                    },\r\n                    \"cancel\": {\r\n                        \"isConfirmed\": false,\r\n                        \"date\": \"2023-09-13T02:18:22.836Z\"\r\n                    },\r\n                    \"refunded\": {\r\n                        \"isConfirmed\": false,\r\n                        \"date\": \"2023-09-13T02:18:22.836Z\"\r\n                    }\r\n                },\r\n                \"productId\": \"63edf99c3d3ffda367ca8975\",\r\n                \"qty\": 2,\r\n                \"packageId\": \"63ecc5822e1797f4b8ff43b1\",\r\n                \"status\": \"upcoming\",\r\n                \"paymentStatus\": \"pending\",\r\n                \"_id\": \"63f8923c3d3ffda367caaf0d\",\r\n                \"id\": \"63f8923c3d3ffda367caaf0d\"\r\n            },\r\n            {\r\n                \"address\": {\r\n                    \"locality\": \"basti khera\",\r\n                    \"city\": \"unnao\",\r\n                    \"state\": \"uttar pradesh\",\r\n                    \"country\": \"India\",\r\n                    \"zipcode\": 209827\r\n                },\r\n                \"orderStatus\": {\r\n                    \"orderConfirm\": {\r\n                        \"isConfirmed\": true,\r\n                        \"date\": \"2023-09-13T02:18:22.836Z\"\r\n                    },\r\n                    \"shipped\": {\r\n                        \"isConfirmed\": false,\r\n                        \"date\": \"2023-09-13T02:18:22.836Z\"\r\n                    },\r\n                    \"outForDelivery\": {\r\n                        \"isConfirmed\": false,\r\n                        \"date\": \"2023-09-13T02:18:22.836Z\"\r\n                    },\r\n                    \"delivered\": {\r\n                        \"isConfirmed\": false,\r\n                        \"date\": \"2023-09-13T02:18:22.836Z\"\r\n                    },\r\n                    \"cancel\": {\r\n                        \"isConfirmed\": false,\r\n                        \"date\": \"2023-09-13T02:18:22.836Z\"\r\n                    },\r\n                    \"refunded\": {\r\n                        \"isConfirmed\": false,\r\n                        \"date\": \"2023-09-13T02:18:22.836Z\"\r\n                    }\r\n                },\r\n                \"productId\": \"63ecc5de2e1797f4b8ff43b6\",\r\n                \"qty\": 2,\r\n                \"packageId\": \"63ecc5822e1797f4b8ff43b1\",\r\n                \"status\": \"upcoming\",\r\n                \"paymentStatus\": \"pending\",\r\n                \"_id\": \"63f8923c3d3ffda367caaf0d\",\r\n                \"id\": \"63f8923c3d3ffda367caaf0d\"\r\n            }\r\n        ]\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/userapp/order/update/63f8923c3d3ffda367caaf0b",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "userapp",
+                    "order",
+                    "update",
+                    "63f8923c3d3ffda367caaf0b"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "softDelete",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OGRlMjA1NTg2MGMzY2M1NGFkNTZlOSIsImVtYWlsIjoiYWJjQGdtYWlsLmNvbSIsImlhdCI6MTY4ODQ5NjE3MiwiZXhwIjoxNjg5MDk2MTcyfQ.tK_4Myp9WlqebZLCkA6k9TYaQVwiNIrF3OGPnGn39UM",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/userapp/order/soft-delete/64a35f6b2223fb76434d5d97",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "userapp",
+                    "order",
+                    "soft-delete",
+                    "64a35f6b2223fb76434d5d97"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "create",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OGRlMjA1NTg2MGMzY2M1NGFkNTZlOSIsImVtYWlsIjoiYWJjQGdtYWlsLmNvbSIsImlhdCI6MTY4ODExOTM4MCwiZXhwIjoxNjg4NzE5MzgwfQ.ZxSOi65dhgbJkuJ5BHV1gO5uz2oRwNw85wKp-P7pbJ0",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": " {\r\n    \"userId\":\"648de2055860c3cc54ad56e9\",\r\n    \"products\":[\r\n        {\r\n            \"productId\": \"648ed8d9f21112fa41a8da60\",\r\n            \"qty\": \"1\"\r\n        } \r\n     ],\r\n         \"address\":{\r\n              \"locality\" : \"basti khera\",\r\n              \"city\" : \"unnao\",\r\n              \"state\" : \"uttar pradesh\",\r\n              \"country\" : \"India\",\r\n              \"zipcode\" : 209827\r\n            },\r\n            \"status\": \"pending\",\r\n            \"paymentStatus\": \"pending\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/userapp/order/create",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "userapp",
+                    "order",
+                    "create"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "get",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OGRlMjA1NTg2MGMzY2M1NGFkNTZlOSIsImVtYWlsIjoiYWJjQGdtYWlsLmNvbSIsImlhdCI6MTY4ODExOTM4MCwiZXhwIjoxNjg4NzE5MzgwfQ.ZxSOi65dhgbJkuJ5BHV1gO5uz2oRwNw85wKp-P7pbJ0",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "http://localhost:5000/userapp/order/get/648ed8d9f21112fa41a8da60",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "userapp",
+                    "order",
+                    "get",
+                    "648ed8d9f21112fa41a8da60"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "list",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZjhiYTA1YWEzOWIzYmYxYzQzOWIwNSIsImVtYWlsIjoiTml0aXNoQHNhbnUuY29tIiwiaWF0IjoxNjc5MTMyMTgzLCJleHAiOjE2Nzk3MzIxODN9.pNZ9PIS4AljAh254VdB0XxcuV04LXMnKZueVoRX35T4",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"query\":{\"$and\":[{\"userId\":\"63f8ba05aa39b3bf1c439b05\"},{\"isDeleted\":false},{\"products.qty\":2}]},\r\n  \"options\": {\r\n    \"collation\": \"\",\r\n    \"sort\": {\"name\":1},\r\n    \"populate\": \"products\",\r\n    \"projection\": \"\",\r\n    \"lean\": false,\r\n    \"leanWithId\": true,\r\n    \"page\": 1,\r\n    \"limit\": 10,\r\n    \"pagination\": true,\r\n    \"useEstimatedCount\": false,\r\n    \"useCustomCountFn\": false,\r\n    \"forceCountFn\": false,\r\n    \"read\": {},\r\n    \"options\": {}\r\n  },\r\n  \"isCountOnly\": false\r\n}"
+                },
+                "url": {
+                  "raw": "https://api.techpyro.com/api/userapp/order/list",
+                  "protocol": "https",
+                  "host": [
+                    "api",
+                    "techpyro",
+                    "com"
+                  ],
+                  "path": [
+                    "api",
+                    "userapp",
+                    "order",
+                    "list"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "admin",
+      "item": [
+        {
+          "name": "auth",
+          "item": [
+            {
+              "name": "login",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n     \"username\" :\"admin@gmail.com\",\r\n     \"password\" : \"password\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/auth/login",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "auth",
+                    "login"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "register",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\":\"admin@gmail.com\",\r\n     \"password\" : \"password\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/auth/register",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "auth",
+                    "register"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "resetPasswordOtp",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\":\"harshpatel726891@gmail.com\"\r\n}    "
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/auth/reset-password-otp",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "auth",
+                    "reset-password-otp"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "resetPassword",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"code\": 364433,\r\n    \"newPassword\": \"harsh\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/auth/reset-password",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "auth",
+                    "reset-password"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "logout",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDdhYjkyM2IwYzgzNzUwMzZmMGNkNyIsImVtYWlsIjoiaXNodUBnbWFpbC5jb20iLCJpYXQiOjE2NzUwODE0NzcsImV4cCI6MTY3NTY4MTQ3N30.61PyG_pL7ADBI7LrreJ4ulK-Kt2ryTqdgRq7uuvgFbc",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/auth/logout",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "auth",
+                    "logout"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "validateOtp",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"otp\":\"a65c0be4-a2be-46e4-8978-c98c28abf670\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/auth/validate-otp",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "auth",
+                    "validate-otp"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "userRoutes",
+          "item": [
+            {
+              "name": "update",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDY2MDYwNTAwNmYyNjM5ODQ1OGRiZiIsImVtYWlsIjoiZG93b3JrbGVzc0BnbWFpbC5jb20iLCJpYXQiOjE2NzUwNjc3NDEsImV4cCI6MTY3NTY2Nzc0MX0.wAU5bp4IWz1KvXym0467xXrw500zBynM2i595dLEodI",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\":\"harshpatel@gmail.com\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/user/update/63d660605006f26398458dbf",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "user",
+                    "update",
+                    "63d660605006f26398458dbf"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "softDelete",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDdhYjkyM2IwYzgzNzUwMzZmMGNkNyIsImVtYWlsIjoiaXNodUBnbWFpbC5jb20iLCJpYXQiOjE2NzUwODE1MzYsImV4cCI6MTY3NTY4MTUzNn0.c7lNyj6XXaWsM7FeQWhDsJOiHlP7yo14NQ0Siyz2Px4",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/admin/user/soft-delete/63d7ab8f3b0c8375036f0cd3",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "user",
+                    "soft-delete",
+                    "63d7ab8f3b0c8375036f0cd3"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "create",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n     \"email\" : \"jaglor@gmail.com\",\r\n     \"password\": \"123456789\",\r\n      \"userType\": 1,\r\n      \"admin\" : \"63d8e328a2aa577e0d62f577\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/user/create",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "user",
+                    "create"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "get",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDdhYjkyM2IwYzgzNzUwMzZmMGNkNyIsImVtYWlsIjoiaXNodUBnbWFpbC5jb20iLCJpYXQiOjE2NzUwODUzODgsImV4cCI6MTY3NTY4NTM4OH0.HaZSxgqol8KjXz2h4LPxxpblgscgbpt0D5eJzeU0L2I",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/admin/user/get/63d7ab8f3b0c8375036f0cd3",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "user",
+                    "get",
+                    "63d7ab8f3b0c8375036f0cd3"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "list",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDdhYjkyM2IwYzgzNzUwMzZmMGNkNyIsImVtYWlsIjoiaXNodUBnbWFpbC5jb20iLCJpYXQiOjE2NzUwODUzODgsImV4cCI6MTY3NTY4NTM4OH0.HaZSxgqol8KjXz2h4LPxxpblgscgbpt0D5eJzeU0L2I",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"query\":{\"$or\": [ {\"email\" : {\"$regex\" : \"Do\",\"$options\": \"i\"}},{\"userType\":2}]},\r\n  \"options\": {\r\n    \"collation\": \"\",\r\n    \"sort\": {\"email\":1},\r\n    \"populate\": \"\",\r\n    \"projection\": \"\",\r\n    \"lean\": false,\r\n    \"leanWithId\": true,\r\n    \"page\": 1,\r\n    \"limit\": 10,\r\n    \"pagination\": true,\r\n    \"useEstimatedCount\": false,\r\n    \"useCustomCountFn\": false,\r\n    \"forceCountFn\": false,\r\n    \"read\": {},\r\n    \"options\": {}\r\n  },\r\n  \"isCountOnly\": true\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/user/list",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "user",
+                    "list"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "count",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTg0MzA4LCJleHAiOjE2NzU3ODQzMDh9.lmOo35zdTLrufluZ1sSp9tSj0QKXxwrAnlBrjxQh5JE",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"where\": {\r\n    \"isActive\": true\r\n  }\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/user/count",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "user",
+                    "count"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "me",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZGFlY2U5ODM4NDJkNjE3NzFjZDU4NSIsImlhdCI6MTY3NTI5NDEzNywiZXhwIjoxNjc1ODk0MTM3fQ.Ybg8apUv2sU3Ly9QDRnPiVtbJMeB_D2lzLTJijSzIBI",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/auth/me",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "auth",
+                    "me"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "paymentRoutes",
+          "item": [
+            {
+              "name": "update",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"paymentChannel\":\"online\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/payment/update/63d97f71281be221b7683d61",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "payment",
+                    "update",
+                    "63d97f71281be221b7683d61"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "softDelete",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/admin/payment/soft-delete/63d97f71281be221b7683d61",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "payment",
+                    "soft-delete",
+                    "63d97f71281be221b7683d61"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "create",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"userId\":\"63d8e328a2aa577e0d62f577\",\r\n  \"refId\":\"#UPI ID\",\r\n   \"paymentChannel\":\"Cash\",\r\n    \"currentPayment\":2000,\r\n    \"totalPayment\":5000,\r\n    \"paymentStatus\": \"partial\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/payment/create",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "payment",
+                    "create"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "get",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/admin/package/get/63d968bd0ac4f5687492da8b",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "package",
+                    "get",
+                    "63d968bd0ac4f5687492da8b"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "list",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"query\":{},\r\n  \"options\": {\r\n    \"collation\": \"\",\r\n    \"sort\": {\"name\":1},\r\n    \"populate\": \"\",\r\n    \"projection\": \"\",\r\n    \"lean\": false,\r\n    \"leanWithId\": true,\r\n    \"page\": 1,\r\n    \"limit\": 10,\r\n    \"pagination\": true,\r\n    \"useEstimatedCount\": false,\r\n    \"useCustomCountFn\": false,\r\n    \"forceCountFn\": false,\r\n    \"read\": {},\r\n    \"options\": {}\r\n  },\r\n  \"isCountOnly\": false\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/payment/list",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "payment",
+                    "list"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "count",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"where\": {\r\n    \"isActive\": true\r\n  }\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/payment/count",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "payment",
+                    "count"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "addBulk",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"data\": [\r\n   {\r\n  \"userId\":\"63d8e328a2aa577e0d62f577\",\r\n  \"refId\":\"#Axis@1234\",\r\n   \"paymentChannel\":\"Cash\",\r\n    \"currentPayment\":2000,\r\n    \"totalPayment\":5000,\r\n    \"paymentStatus\": \"pending\"\r\n},\r\n   {\r\n  \"userId\":\"63d8e328a2aa577e0d62f577\",\r\n  \"refId\":\"#SBI@1234\",\r\n   \"paymentChannel\":\"Cash\",\r\n    \"currentPayment\":2000,\r\n    \"totalPayment\":5000,\r\n    \"paymentStatus\": \"pending\"\r\n}\r\n  ]\r\n}\r\n"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/payment/addBulk",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "payment",
+                    "addBulk"
+                  ],
+                  "query": [
+                    {
+                      "key": "",
+                      "value": null,
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "delete",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/admin/payment/delete/63d97f71281be221b7683d61",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "payment",
+                    "delete",
+                    "63d97f71281be221b7683d61"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "deleteMany",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"isWarning\": true,\r\n  \"ids\": [\r\n    \"63d97fbdede4b01ed3e23707\"\r\n  ]\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/payment/deleteMany",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "payment",
+                    "deleteMany"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "softDeleteMany",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \r\n  \"ids\": [\r\n    \"63d980f8ede4b01ed3e2371d\"\r\n  ]\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/payment/softDeleteMany",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "payment",
+                    "softDeleteMany"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "updateBulk",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"filter\": {\r\n    \"isActive\": true\r\n  },\r\n  \"data\": {\r\n    \"isDeleted\": false\r\n  }\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/payment/updateBulk",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "payment",
+                    "updateBulk"
+                  ],
+                  "query": [
+                    {
+                      "key": "",
+                      "value": null,
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "productRoutes",
+          "item": [
+            {
+              "name": "update",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n   \"title\": {\r\n                    \"shortTitle\": \"Website for Education\",\r\n                    \"longTitle\": \"this most power full website create in Next.js\"\r\n             }\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/product/update/63d990cd710097cb0f230b54",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "product",
+                    "update",
+                    "63d990cd710097cb0f230b54"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "softDelete",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/admin/product/soft-delete/63d990cd710097cb0f230b54",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "product",
+                    "soft-delete",
+                    "63d990cd710097cb0f230b54"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "get",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/admin/product/get/63d98f7d88d4ac2af9796a80",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "product",
+                    "get",
+                    "63d98f7d88d4ac2af9796a80"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "create",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OGVjZGFmZTE0ZTVkMmE3ZjE1NTQyYyIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjg3MDgwMzc4LCJleHAiOjE2ODc2ODAzNzh9.mPx9NzSo2JkBdzc8ZII5yYl10yN-gnyNqkEYCOJEKho",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "  {\"title\" :{\r\n        \"shortTitle\" : \"FLITE\",\r\n        \"longTitle\" : \"Clogs for men  FL-2020\"\r\n      },\r\n      \"category\":\"footwear\",\r\n      \"subCategory\":\"Sandals & Clogs\",\r\n      \"price\":{\r\n        \"mrp\":  549,\r\n        \"discount\": \"0\",\r\n        \"cost\": 0\r\n      },\r\n      \"image\" : \"https://dxkvlfvncvqr8.cloudfront.net/media/product-image/FL-2020-NVWH-1.jpg\",\r\n      \"productImages\" : [\r\n        {\r\n            \"name\":\"CLOGS\",\r\n            \"path\": \"https://dxkvlfvncvqr8.cloudfront.net/media/product-image/FL-2020-NVWH-2.jpg\"\r\n        },\r\n        {\r\n            \"name\":\"CLOGS\",\r\n            \"path\": \"https://dxkvlfvncvqr8.cloudfront.net/media/product-image/FL-2020-NVWH-3.jpg\"\r\n        },\r\n        {\r\n            \"name\":\"CLOGS\",\r\n            \"path\": \"https://dxkvlfvncvqr8.cloudfront.net/media/product-image/FL-2020-NVWH-5.jpg\"\r\n        }\r\n      ]\r\n     \r\n      \r\n     \r\n  }"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/product/create",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "product",
+                    "create"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "list",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"query\":{},\r\n  \"options\": {\r\n    \"collation\": \"\",\r\n    \"sort\": {\"name\":1},\r\n    \"populate\": \"\",\r\n    \"projection\": \"\",\r\n    \"lean\": false,\r\n    \"leanWithId\": true,\r\n    \"page\": 1,\r\n    \"limit\": 10,\r\n    \"pagination\": true,\r\n    \"useEstimatedCount\": false,\r\n    \"useCustomCountFn\": false,\r\n    \"forceCountFn\": false,\r\n    \"read\": {},\r\n    \"options\": {}\r\n  },\r\n  \"isCountOnly\": false\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/product/list",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "product",
+                    "list"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "count",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"where\": {\r\n    \"isActive\": true\r\n  }\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/product/count",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "product",
+                    "count"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "addBulk",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"data\": [\r\n {\"title\" :{\r\n        \"shortTitle\" : \"App for Education\",\r\n        \"longTitle\" : \"this most power full website create in Flutter\"\r\n      },\r\n      \"price\":{\r\n        \"mrp\": 4000,\r\n        \"discount\": \"50%\",\r\n        \"cost\": 2000\r\n      },\r\n      \"tagLine\": \"online Buisness\",\r\n      \"image\" : \"https://images.pexels.com/photos/15260363/pexels-photo-15260363.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load\",\r\n      \"productImages\" : [\r\n        {\r\n            \"id\":\"1\",\r\n            \"productImageUrls\": \"https://images.pexels.com/photos/905847/pexels-photo-905847.jpeg?auto=compress&cs=tinysrgb&w=600\"\r\n        },\r\n         {\r\n            \"id\":\"2\",\r\n            \"productImageUrls\": \"https://images.pexels.com/photos/1566837/pexels-photo-1566837.jpeg?auto=compress&cs=tinysrgb&w=600\"\r\n        }\r\n      ],\r\n      \"details\" : {\r\n         \"storage\" : \"4GB\"\r\n      },\r\n      \"packageId\": \"63d9689d0ac4f5687492da84\",\r\n      \"productUrl\": \"https://techpyro-restaurent8.netlify.app/\",\r\n      \"productVideo\": [\r\n       {\r\n        \"productVideoUrl\":\"https://youtu.be/9XxLrIeWMl4\"\r\n       }\r\n      ],\r\n      \"reviewAndRating\" :[\r\n           {\r\n        \"userId\":\"63d8e6dc64b22b343fc9b0d2\",\r\n          \"rating\":4,\r\n          \"title\":\"this product is very good\",\r\n          \"discription\":\"working of this product is so higher than other\",\r\n          \"productReviewUrl\":\"https://images.pexels.com/photos/708587/pexels-photo-708587.jpeg?auto=compress&cs=tinysrgb&w=600\",\r\n          \"like\":2,\r\n          \"disLike\":0\r\n      },\r\n      {\r\n        \"userId\":\"63d8e914c7bd05ba5224b432\",\r\n          \"rating\":2,\r\n          \"title\":\"this product is very bad\",\r\n          \"discription\":\"working of this product is so lower than other\",\r\n          \"productReviewUrl\":\"https://images.pexels.com/photos/708587/pexels-photo-708587.jpeg?auto=compress&cs=tinysrgb&w=600\",\r\n          \"like\":10,\r\n          \"disLike\":20\r\n      }\r\n      ],\r\n      \"faqs\":[\r\n        {\r\n           \"question\":\"how open this\",\r\n           \"answer\":\"enter valid login access\"\r\n        }\r\n      ],\r\n      \"tags\":[\r\n        {\r\n          \"name\":\"education\",\r\n          \"tagUrls\":\"https://techpyro.com\"\r\n        }\r\n    ]\r\n  },\r\n   {\"title\" :{\r\n        \"shortTitle\" : \"Graphic Designs for Education\",\r\n        \"longTitle\" : \"this most power full Graphic Design in Figma \"\r\n      },\r\n      \"price\":{\r\n        \"mrp\": 4000,\r\n        \"discount\": \"50%\",\r\n        \"cost\": 2000\r\n      },\r\n      \"tagLine\": \"online Buisness\",\r\n      \"image\" : \"https://images.pexels.com/photos/15260363/pexels-photo-15260363.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load\",\r\n      \"productImages\" : [\r\n        {\r\n            \"id\":\"1\",\r\n            \"productImageUrls\": \"https://images.pexels.com/photos/905847/pexels-photo-905847.jpeg?auto=compress&cs=tinysrgb&w=600\"\r\n        },\r\n         {\r\n            \"id\":\"2\",\r\n            \"productImageUrls\": \"https://images.pexels.com/photos/1566837/pexels-photo-1566837.jpeg?auto=compress&cs=tinysrgb&w=600\"\r\n        }\r\n      ],\r\n      \"details\" : {\r\n         \"storage\" : \"4GB\"\r\n      },\r\n      \"packageId\": \"63d9689d0ac4f5687492da84\",\r\n      \"productUrl\": \"https://techpyro-restaurent8.netlify.app/\",\r\n      \"productVideo\": [\r\n       {\r\n        \"productVideoUrl\":\"https://youtu.be/9XxLrIeWMl4\"\r\n       }\r\n      ],\r\n      \"reviewAndRating\" :[\r\n           {\r\n        \"userId\":\"63d8e6dc64b22b343fc9b0d2\",\r\n          \"rating\":4,\r\n          \"title\":\"this product is very good\",\r\n          \"discription\":\"working of this product is so higher than other\",\r\n          \"productReviewUrl\":\"https://images.pexels.com/photos/708587/pexels-photo-708587.jpeg?auto=compress&cs=tinysrgb&w=600\",\r\n          \"like\":2,\r\n          \"disLike\":0\r\n      },\r\n      {\r\n        \"userId\":\"63d8e914c7bd05ba5224b432\",\r\n          \"rating\":2,\r\n          \"title\":\"this product is very bad\",\r\n          \"discription\":\"working of this product is so lower than other\",\r\n          \"productReviewUrl\":\"https://images.pexels.com/photos/708587/pexels-photo-708587.jpeg?auto=compress&cs=tinysrgb&w=600\",\r\n          \"like\":10,\r\n          \"disLike\":20\r\n      }\r\n      ],\r\n      \"faqs\":[\r\n        {\r\n           \"question\":\"how open this\",\r\n           \"answer\":\"enter valid login access\"\r\n        }\r\n      ],\r\n      \"tags\":[\r\n        {\r\n          \"name\":\"education\",\r\n          \"tagUrls\":\"https://techpyro.com\"\r\n        }\r\n    ]\r\n  }\r\n  ]\r\n}\r\n"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/product/addBulk",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "product",
+                    "addBulk"
+                  ],
+                  "query": [
+                    {
+                      "key": "",
+                      "value": null,
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "delete",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/admin/product/delete/63d98f7d88d4ac2af9796a80",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "product",
+                    "delete",
+                    "63d98f7d88d4ac2af9796a80"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "deleteMany",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"isWarning\": true,\r\n  \"ids\": [\r\n    \"63d98fdd710097cb0f230b27\"\r\n  ]\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/product/deleteMany",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "product",
+                    "deleteMany"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "softDeleteMany",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \r\n  \"ids\": [\r\n    \"63d990cd710097cb0f230b54\"\r\n  ]\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/product/softDeleteMany",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "product",
+                    "softDeleteMany"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "updateBulk",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"filter\": {\r\n    \"isActive\": true\r\n  },\r\n  \"data\": {\r\n    \"isDeleted\": false\r\n  }\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/product/updateBulk",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "product",
+                    "updateBulk"
+                  ],
+                  "query": [
+                    {
+                      "key": "",
+                      "value": null,
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "cartRoutes",
+          "item": [
+            {
+              "name": "update",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"products\": [\r\n                    {\r\n                       \r\n                        \"qty\": 5\r\n                       \r\n                    }\r\n    ]\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/cart/update/63d99d91e7da88be4f888201",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "cart",
+                    "update",
+                    "63d99d91e7da88be4f888201"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "softDelete",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/admin/cart/soft-delete/63d990cd710097cb0f230b54",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "cart",
+                    "soft-delete",
+                    "63d990cd710097cb0f230b54"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "create",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWZlMzc5ZjU5ZmExYjQ5ZDhhZGJlNSIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjg0MDA5MTQzLCJleHAiOjE2ODQ2MDkxNDN9.BCc3NBw0cuQKpEqMJZpVuJBeGjf8ZYRkRGdaN0arZyY",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"userId\":\"645fe379f59fa1b49d8adbe5\",\r\n    \"products\":[\r\n        {\r\n            \"productId\": \"645ff14c64a76c080243eaa2\",\r\n            \"qty\": 1\r\n        }\r\n     ]\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/cart/create",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "cart",
+                    "create"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "get",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/admin/cart/get/63d99d91e7da88be4f888201",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "cart",
+                    "get",
+                    "63d99d91e7da88be4f888201"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "list",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZWNjNGZlMmUxNzk3ZjRiOGZmNDNhNyIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjc2NDYxMzM2LCJleHAiOjE2NzcwNjEzMzZ9.eeEr2PN5LIT9bzWJcFL_t9V87sQ441iL-5lL-XDywCE",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"query\":{},\r\n  \"options\": {\r\n    \"collation\": \"\",\r\n    \"sort\": {\"name\":1},\r\n    \"populate\": \"products.productId\",\r\n    \"projection\": \"\",\r\n    \"lean\": false,\r\n    \"leanWithId\": true,\r\n    \"page\": 1,\r\n    \"limit\": 10,\r\n    \"pagination\": true,\r\n    \"useEstimatedCount\": false,\r\n    \"useCustomCountFn\": false,\r\n    \"forceCountFn\": false,\r\n    \"read\": {},\r\n    \"options\": {}\r\n  },\r\n  \"isCountOnly\": false\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/cart/list",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "cart",
+                    "list"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "count",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"where\": {\r\n    \"isActive\": true\r\n  }\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/cart/count",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "cart",
+                    "count"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "addBulk",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"data\": [\r\n {\r\n    \"userId\":\"63d8e6dc64b22b343fc9b0d2\",\r\n    \"products\":[\r\n        {\r\n            \"productId\": \"63d990cd710097cb0f230b54\",\r\n            \"qty\": 1\r\n        },\r\n         {\r\n            \"productId\": \"63d990cd710097cb0f230b5c\",\r\n            \"qty\": 2\r\n        }\r\n     ]\r\n},\r\n{\r\n    \"userId\":\"63d8e6dc64b22b343fc9b0d2\",\r\n    \"products\":[\r\n        {\r\n            \"productId\": \"63d990cd710097cb0f230b54\",\r\n            \"qty\": 1\r\n        },\r\n         {\r\n            \"productId\": \"63d990cd710097cb0f230b5c\",\r\n            \"qty\": 2\r\n        }\r\n     ]\r\n}\r\n  ]\r\n}\r\n"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/cart/addBulk",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "cart",
+                    "addBulk"
+                  ],
+                  "query": [
+                    {
+                      "key": "",
+                      "value": null,
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "delete",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/admin/cart/delete/63d99d46e7da88be4f8881ed",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "cart",
+                    "delete",
+                    "63d99d46e7da88be4f8881ed"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "deleteMany",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"isWarning\": true,\r\n  \"ids\": [\r\n    \"63d99d8fe7da88be4f8881f7\"\r\n  ]\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/cart/deleteMany",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "cart",
+                    "deleteMany"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "softDeleteMany",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \r\n  \"ids\": [\r\n    \"63d99d91e7da88be4f888201\"\r\n  ]\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/cart/softDeleteMany",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "cart",
+                    "softDeleteMany"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "updateBulk",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"filter\": {\r\n    \"isActive\": true\r\n  },\r\n  \"data\": {\r\n    \"isDeleted\": false\r\n  }\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/cart/updateBulk",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "cart",
+                    "updateBulk"
+                  ],
+                  "query": [
+                    {
+                      "key": "",
+                      "value": null,
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "orderRoutes",
+          "item": [
+            {
+              "name": "update",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n   \"status\":\"pending\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/order/update/63d9a589d66464df53594dcf",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "order",
+                    "update",
+                    "63d9a589d66464df53594dcf"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "softDelete",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/admin/order/soft-delete/63d9a589d66464df53594dcf",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "order",
+                    "soft-delete",
+                    "63d9a589d66464df53594dcf"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "create",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"userId\":\"63d8e6dc64b22b343fc9b0d2\",\r\n    \"cartId\":\"63d99e84e7da88be4f888220\",\r\n    \"products\":[\r\n        {\r\n            \"productId\": \"63d990cd710097cb0f230b54\",\r\n            \"qty\": \"1\",\r\n            \"packageId\":\"63d9689d0ac4f5687492da84\",\r\n            \"address\":{\r\n              \"locality\" : \"basti khera\",\r\n              \"city\" : \"unnao\",\r\n              \"state\" : \"uttar pradesh\",\r\n              \"country\" : \"India\",\r\n              \"zipcode\" : 209827\r\n           },\r\n           \"paymentId\": \"63d980f8ede4b01ed3e2371d\",\r\n      \"status\": \"upcoming\",\r\n      \"paymentStatus\": \"pending\",\r\n      \"orderStatus\":{\r\n         \"orderConfirm\":{\r\n          \"isConfirmed\":true,\r\n          \"date\":\"2023-09-13T02:18:22.836Z\"\r\n         },\r\n         \"shipped\":{\r\n          \"isConfirmed\":true,\r\n          \"date\":\"2023-09-13T02:18:22.836Z\"\r\n         },\r\n         \"outForDelivery\":{\r\n          \"isConfirmed\":\"true\",\r\n          \"date\":\"2023-09-13T02:18:22.836Z\"\r\n         },\r\n         \"delivered\":{\r\n          \"isConfirmed\":true,\r\n          \"date\":\"2023-09-13T02:18:22.836Z\"\r\n         },\r\n         \"cancel\":{\r\n          \"isConfirmed\":false,\r\n          \"date\":\"2023-09-13T02:18:22.836Z\"\r\n         },\r\n         \"refunded\":{\r\n          \"isConfirmed\":false,\r\n          \"date\":\"2023-09-13T02:18:22.836Z\"\r\n         } \r\n      }\r\n        }\r\n     ]\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/order/create",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "order",
+                    "create"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "get",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/admin/order/get/63d9a49aafaff6525574b473",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "order",
+                    "get",
+                    "63d9a49aafaff6525574b473"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "list",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"query\":{},\r\n  \"options\": {\r\n    \"collation\": \"\",\r\n    \"sort\": {\"name\":1},\r\n    \"populate\": \"\",\r\n    \"projection\": \"\",\r\n    \"lean\": false,\r\n    \"leanWithId\": true,\r\n    \"page\": 1,\r\n    \"limit\": 10,\r\n    \"pagination\": true,\r\n    \"useEstimatedCount\": false,\r\n    \"useCustomCountFn\": false,\r\n    \"forceCountFn\": false,\r\n    \"read\": {},\r\n    \"options\": {}\r\n  },\r\n  \"isCountOnly\": false\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/order/list",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "order",
+                    "list"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "count",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"where\": {\r\n    \"isActive\": true\r\n  }\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/order/count",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "order",
+                    "count"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "addBulk",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"data\": [\r\n {\r\n    \"userId\":\"63d8e6dc64b22b343fc9b0d2\",\r\n    \"cartId\":\"63d99e84e7da88be4f888220\",\r\n    \"paymentId\":\"63d980f8ede4b01ed3e2371d\",\r\n    \"packageId\":\"63d9689d0ac4f5687492da84\",\r\n    \"status\":\"active\",\r\n    \"paymentStatus\":\"success\"\r\n},\r\n{\r\n    \"userId\":\"63d8e6dc64b22b343fc9b0d2\",\r\n    \"cartId\":\"63d99e84e7da88be4f888220\",\r\n    \"paymentId\":\"63d980f8ede4b01ed3e2371d\",\r\n    \"packageId\":\"63d9689d0ac4f5687492da84\",\r\n    \"status\":\"active\",\r\n    \"paymentStatus\":\"success\"\r\n}\r\n  ]\r\n}\r\n"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/order/addBulk",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "order",
+                    "addBulk"
+                  ],
+                  "query": [
+                    {
+                      "key": "",
+                      "value": null,
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "delete",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/admin/order/delete/63d9a474afaff6525574b469",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "order",
+                    "delete",
+                    "63d9a474afaff6525574b469"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "deleteMany",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"isWarning\": true,\r\n  \"ids\": [\r\n    \"63d9a49aafaff6525574b473\"\r\n  ]\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/order/deleteMany",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "order",
+                    "deleteMany"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "softDeleteMany",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \r\n  \"ids\": [\r\n    \"63d9a589d66464df53594dcf\"\r\n  ]\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/order/softDeleteMany",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "order",
+                    "softDeleteMany"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "updateBulk",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhlMzI4YTJhYTU3N2UwZDYyZjU3NyIsImVtYWlsIjoiaGFyc2hAZ21haWwuY29tIiwiaWF0IjoxNjc1MTU4MzIwLCJleHAiOjE2NzU3NTgzMjB9.25Gsu_8ZV-lW8ayV4-r8v2leUBCYm2ZmQTUUxVifekw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"filter\": {\r\n    \"isActive\": true\r\n  },\r\n  \"data\": {\r\n    \"isDeleted\": false\r\n  }\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/order/updateBulk",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "order",
+                    "updateBulk"
+                  ],
+                  "query": [
+                    {
+                      "key": "",
+                      "value": null,
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "fileUploadRoutes",
+          "item": [
+            {
+              "name": "upload",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+                    "key": "Content-Type",
+                    "value": "multipart/form-data",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "files",
+                      "contentType": "image/gif",
+                      "type": "file",
+                      "value": null
+                    },
+                    {
+                      "key": "",
+                      "value": "",
+                      "contentType": "application/json",
+                      "type": "text",
+                      "disabled": true
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/file/upload",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "file",
+                    "upload"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "generate-pre-signed-url",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+                    "key": "Content-Type",
+                    "value": "multipart/form-data",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "files",
+                      "contentType": "image/gif",
+                      "type": "file",
+                      "src": "/C:/Users/DIWAKAR KUMAR/Pictures/wallpaper/TECH/Abstract Background Digital Technology 00552_Preview.jpg"
+                    },
+                    {
+                      "key": "",
+                      "value": "",
+                      "contentType": "application/json",
+                      "type": "text",
+                      "disabled": true
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "http://localhost:5000/admin/file/upload",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "admin",
+                    "file",
+                    "upload"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
