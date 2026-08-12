@@ -1,6 +1,7 @@
 import React , { cache } from "react";
 import Collection from "@/features/category/Collection";
 import { NavData } from "@/constants/navConstant";
+export const dynamic = "force-dynamic"; 
 
 const getProducts = cache(async (category) => {
   try {
@@ -58,7 +59,7 @@ export async function generateMetadata({ params }) {
  
   const product = await getProducts(category)
   console.log(product, "product");
-  const image = product?.[0].productImages?.[0]?.path || product?.[0].image;
+  const image = product?.[0].productImages?.[0]?.path || product?.[0]?.image;
   console.log(image,"image");
   return {
     metadataBase: new URL(
@@ -109,42 +110,42 @@ export async function generateMetadata({ params }) {
 }
 
 // Generate Static Routes
-export async function generateStaticParams() {
-  const categorySet = new Set();
+// export async function generateStaticParams() {
+//   const categorySet = new Set();
 
-  const addCategory = (link) => {
-    if (!link || typeof link !== "string") return;
+//   const addCategory = (link) => {
+//     if (!link || typeof link !== "string") return;
 
-    // only collections routes
-    if (!link.startsWith("/collections/")) return;
+//     // only collections routes
+//     if (!link.startsWith("/collections/")) return;
 
-    const slug = link.replace("/collections/", "").trim().toLowerCase();
+//     const slug = link.replace("/collections/", "").trim().toLowerCase();
 
-    // skip invalid/static routes
-    if (!slug || slug === "all" || slug.includes("[") || slug.includes("]")) {
-      return;
-    }
+//     // skip invalid/static routes
+//     if (!slug || slug === "all" || slug.includes("[") || slug.includes("]")) {
+//       return;
+//     }
 
-    categorySet.add(slug);
-  };
+//     categorySet.add(slug);
+//   };
 
-  NavData.forEach((item) => {
-    addCategory(item.link);
-    addCategory(item.titleLink);
+//   NavData.forEach((item) => {
+//     addCategory(item.link);
+//     addCategory(item.titleLink);
 
-    item.subCategory?.forEach((sub) => {
-      addCategory(sub.link);
+//     item.subCategory?.forEach((sub) => {
+//       addCategory(sub.link);
 
-      sub["sub-subCateogry"]?.forEach((child) => {
-        addCategory(child.link);
-      });
-    });
-  });
+//       sub["sub-subCateogry"]?.forEach((child) => {
+//         addCategory(child.link);
+//       });
+//     });
+//   });
 
-  return [...categorySet].map((category) => ({
-    category,
-  }));
-}
+//   return [...categorySet].map((category) => ({
+//     category,
+//   }));
+// }
 
 // Page Component
 export default async function Page({ params }) {
