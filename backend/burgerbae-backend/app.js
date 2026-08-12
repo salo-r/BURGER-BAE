@@ -1,5 +1,4 @@
 const express = require('express');
-app.set('trust proxy', 1);
 const session = require('express-session');
 const cors = require('cors');
 const passport = require('passport');
@@ -21,6 +20,7 @@ const dbConnection = require('./config/db');
 dbConnection();
 
 const app = express();
+app.set('trust proxy', 1);
 const port = process.env.PORT || 8000;
 
 app.use(require('./utils/response/responseHandler'));
